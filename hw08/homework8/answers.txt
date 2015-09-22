@@ -1,0 +1,142 @@
+Name: Justin Byun
+CodeFellows Python F2
+SEA-C45
+Homework 8
+
+
+Problem 1:
+
+(No answers in this file.)
+
+Problem 2:
+
+GC-content: 0.4302926296296296
+
+Problem 3:
+
+Traceback (most recent call last):
+  File "dna_analysis.py", line 38, in <module>
+    linenum = linenum + 1
+NameError: name 'linenum' is not defined
+
+-Program fails to execute as we anticipate; because the line numbers to be read not specified for the gc basepairs (other lines contain different data set, only the linenum%4==2 lines have the DNA bp data).  Thus python fails to read through to count bp’s.
+
+-Because of the initial gc count value is not specified, python fails to count them.
+
+Problem 4:
+
+GC-content: 0.4302926296296296
+AT-content: 0.5689938518518518
+
+Problem 5:
+
+G content 11617901
+C content 11617901
+A content 15362834
+T content 15362834
+
+Problem 6:
+
+*
+Sample_1.fastq and sample 2, at a glance, are same(by the length of the seq variables). HOWEVER if you look into the data set,
+their GC and AT contents/ratio and total count variables are different .  As results, sample_1.fastq and sample 2 are different(see below).
+
+2)python3 dna_analysis.py data/sample_1.fastq:
+
+GC-content: 0.4302926296296296
+G content 11617901
+C content 11617901
+AT-content: 0.5689938518518518
+A content 15362834
+T content 15362834
+Total count variables= 53961470
+The length of the seq variables= 27000000
+
+3)python3 dna_analysis.py data/sample_2.fastq:
+
+GC-content: 0.45105133333333336
+G content 12178386
+C content 12178386
+AT-content: 0.548112925925926
+A content 14799049
+T content 14799049
+Total count variables= 53954870
+The length of the seq variables= 27000000
+
+**
+By the same token, test-high-gc-1 and test-moderate-gc-2 are deleted from the comparison despite the same length of the seq variables.
+if you look further of test-high-gc-2 and test-moderate-gc-1 their length of the seq variables are same length and the total count variables.
+However, if you examine carefully their nature of the nucleotides, 
+test-high-gc-2 has higher GC contents than test-moderate-GC-1.  Thus, they are not same DNA sequences.
+
+8)python3 dna_analysis.py data/test-high-gc-1.fastq:
+
+GC-content: 0.5994
+G content 23976
+C content 23976
+AT-content: 0.3966
+A content 15864
+T content 15864
+Total count variables= 79680
+The length of the seq variables= 40000
+
+9)python3 dna_analysis.py data/test-high-gc-2.fastq:
+
+GC-content: 0.79775
+G content 31910
+C content 31910
+AT-content: 0.198275
+A content 7931
+T content 7931
+Total count variables= 79682
+The length of the seq variables= 40000
+
+10)python3 dna_analysis.py data/test-moderate-gc-1.fastq:
+
+GC-content: 0.495025
+G content 19801
+C content 19801
+AT-content: 0.501
+A content 20040
+T content 20040
+Total count variables= 79682
+The length of the seq variables= 40000
+
+11)python3 dna_analysis.py data/test-moderate-gc-2.fastq:
+
+GC-content: 0.399275
+G content 15971
+C content 15971
+AT-content: 0.596
+A content 23840
+T content 23840
+Total count variables= 79622
+The length of the seq variables= 40000
+
+***
+
+Apparently, the length of the seq variables can easily mislead to wrong conclusion due to its error prone nature( however, it can be used for quick sorting for screening. )
+
+On the other hand other two qualifiers can provision better data to examine their characters as they can offer more detailed scopes, regarding individual nucleotides and their total sum.  
+
+
+
+Problem 7:
+
+AT/GC ratio 4.897561546202294e-08
+
+Problem 8:
+
+Moderate GC content (43% GC content)
+
+Collaboration:
+
+Google/No one
+
+Reflection:
+
+Wish I studied Unix-Git more to work faster and effectively
+Some questions, i wasn’t understand right away so i had to read it several times.
+I have different background and sometimes it’s wording is very hard to decipher.
+For the future students, be prepare yourself, it’s no easy ride at all.
+
