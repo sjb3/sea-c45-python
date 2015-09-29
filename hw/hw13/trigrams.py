@@ -1,6 +1,6 @@
-f = open('sherlock.txt', 'r')
+f = open('/Users/sungjbyun/python2/sea-c45-python/hw/hw13/sherlock.txt', 'r')
 
-#count = {}
+count = {}
 
 for line in f:
     for word in line.split():
@@ -32,6 +32,7 @@ for word in keys:
     out.write('\n')
 
 print("The word 'sherlock' appears " + str(count['sherlock']) + " times in the book.")
+
 
 
 
