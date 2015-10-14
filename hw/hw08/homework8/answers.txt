@@ -26,14 +26,14 @@ NameError: name 'linenum' is not defined
 Problem 4:
 
 GC-content: 0.4302926296296296
-AT-content: 0.5689938518518518
+AT-content: 0.2844969259259259
 
 Problem 5:
 
-G content 11617901
-C content 11617901
-A content 15362834
-T content 15362834
+G content 5738773
+C content 5879128
+A content 7701287
+T content 7661547
 
 Problem 6:
 
@@ -41,81 +41,85 @@ Problem 6:
 Sample_1.fastq and sample 2, at a glance, are same(by the length of the seq variables). HOWEVER if you look into the data set,
 their GC and AT contents/ratio and total count variables are different .  As results, sample_1.fastq and sample 2 are different(see below).
 
-2)python3 dna_analysis.py data/sample_1.fastq:
+2)sample_1.fastq
 
 GC-content: 0.4302926296296296
-G content 11617901
-C content 11617901
-AT-content: 0.5689938518518518
-A content 15362834
-T content 15362834
-Total count variables= 53961470
+G content 5738773
+C content 5879128
+AT-content: 0.2844969259259259
+A content 7701287
+T content 7661547
+Total count variables= 26980735
 The length of the seq variables= 27000000
+AT/GC ratio 1.3223416174746196
 
-3)python3 dna_analysis.py data/sample_2.fastq:
 
+3)sample_2.fastq
 GC-content: 0.45105133333333336
-G content 12178386
-C content 12178386
-AT-content: 0.548112925925926
-A content 14799049
-T content 14799049
-Total count variables= 53954870
+G content 6103168
+C content 6075218
+AT-content: 0.274056462962963
+A content 7467696
+T content 7331353
+Total count variables= 26977435
 The length of the seq variables= 27000000
+AT/GC ratio 1.2151896811285174
 
 **
-By the same token, test-high-gc-1 and test-moderate-gc-2 are deleted from the comparison despite the same length of the seq variables.
-if you look further of test-high-gc-2 and test-moderate-gc-1 their length of the seq variables are same length and the total count variables.
-However, if you examine carefully their nature of the nucleotides, 
-test-high-gc-2 has higher GC contents than test-moderate-GC-1.  Thus, they are not same DNA sequences.
+By the same token, test-high-gc-1 and -2 and test-moderate-gc-1 and -2 seem to have same/similar length.  However, qualitatively, their GC contents and GC/AT ratios are not equal to each other.  Thus, you can conclude that they are not the same samples.
 
-8)python3 dna_analysis.py data/test-high-gc-1.fastq:
 
+8)test-high-gc-1.fastq
 GC-content: 0.5994
-G content 23976
-C content 23976
-AT-content: 0.3966
-A content 15864
-T content 15864
-Total count variables= 79680
+G content 12176
+C content 11800
+AT-content: 0.1983
+A content 7970
+T content 7894
+Total count variables= 39840
 The length of the seq variables= 40000
+AT/GC ratio 0.6616616616616616
 
-9)python3 dna_analysis.py data/test-high-gc-2.fastq:
 
+9)test-high-gc-2.fastq
 GC-content: 0.79775
-G content 31910
-C content 31910
-AT-content: 0.198275
-A content 7931
-T content 7931
-Total count variables= 79682
+G content 15955
+C content 15955
+AT-content: 0.0991375
+A content 3908
+T content 4023
+Total count variables= 39841
 The length of the seq variables= 40000
+AT/GC ratio 0.2485427765590724
 
-10)python3 dna_analysis.py data/test-moderate-gc-1.fastq:
 
+10)test-moderate-gc-1.fastq
 GC-content: 0.495025
-G content 19801
-C content 19801
-AT-content: 0.501
-A content 20040
-T content 20040
-Total count variables= 79682
+G content 9818
+C content 9983
+AT-content: 0.2505
+A content 10077
+T content 9963
+Total count variables= 39841
 The length of the seq variables= 40000
+AT/GC ratio 1.0120700974698247
 
-11)python3 dna_analysis.py data/test-moderate-gc-2.fastq:
 
+11)test-moderate-gc-2.fastq
 GC-content: 0.399275
-G content 15971
-C content 15971
-AT-content: 0.596
-A content 23840
-T content 23840
-Total count variables= 79622
+G content 7972
+C content 7999
+AT-content: 0.298
+A content 11813
+T content 12027
+Total count variables= 39811
 The length of the seq variables= 40000
+AT/GC ratio 1.4927055287708972
+
 
 ***
 
-Apparently, the length of the seq variables can easily mislead to wrong conclusion due to its error prone nature( however, it can be used for quick sorting for screening. )
+In conclusion, the length of the seq variables can easily mislead to wrong conclusion due to its error prone quantitative nature( however, it can be used for quick sorting for screening. )
 
 On the other hand other two qualifiers can provision better data to examine their characters as they can offer more detailed scopes, regarding individual nucleotides and their total sum.  
 
@@ -123,11 +127,11 @@ On the other hand other two qualifiers can provision better data to examine thei
 
 Problem 7:
 
-AT/GC ratio 4.897561546202294e-08
+AT/GC ratio 1.3223416174746196
 
 Problem 8:
 
-Moderate GC content (43% GC content)
+low GC content (AT is more present, ~ 1.3 times more)
 
 Collaboration:
 
